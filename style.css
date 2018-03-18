@@ -1,0 +1,25 @@
+body {
+    position:relative;
+}
+.container {
+    padding-top:30px;
+}
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:32px;
+}
+.label {
+    font-size: 16px;
+}
+.name {
+    font-size:44px;
+}
+.icon {
+    height:40px;
+    padding:0 30px;
+}
+.confetti {
+    background-image: url(img/confetti.gif);
+    height: 90vh;
+    position: absolute;
+}

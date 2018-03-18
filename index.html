@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Nice Site</title>
+        <meta name="description" content="Nice Site">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+    </head>
+    <body>
+        
+        <div class="container">
+            <h3 class="text-center">
+                Welcome to the game
+            </h3>
+            <div class="text-center">
+                <span class="label label-danger">Dog</span>
+                <span class="label label-default">Cat</span>
+                <span class="label label-info">Hamster</span>
+            </div>
+            <h3 class="text-center name">
+                AnimalWars
+            </h3>
+        </div>
+        
+
+        <div id="js-newGameElement" class="container">
+            <div class="row text-center">
+                <button id="js-newGameButton" class="btn btn-success">
+                    New game
+                </button>
+                <div class="rules">
+                    <h4>The rules of the game:<br>
+                        dog > cat<br>
+                        cat > hamster<br>
+                        hamster > dog<br>
+                        10 gained points wins!
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-playerPickElement" class="container">
+            <div class="row text-center">
+                <button id="js-playerPick_dog" class="btn btn-danger">
+                    <img class="icon" src="img/002-dog-1.png">
+                </button>
+
+                <button id="js-playerPick_cat" class="btn btn-default">
+                    <img class="icon" src="img/001-animals.png">
+                </button>
+
+                <button id="js-playerPick_hamster" class="btn btn-info">
+                    <img class="icon" src="img/005-hamster-ball.png">
+                </button>
+            </div>
+        </div>
+
+        <div id="js-resultsTableElement" class="container">
+            <div class="row">
+                <div class="col-xs-5 text-center">
+                    <span id="js-playerPoints" class="badge">
+                        0
+                    </span>
+                    <span id="js-playerName">
+                        Player Name
+                    </span>
+                </div>
+                <div class="col-xs-2 text-center">
+                    VS.
+                </div>
+                <div class="col-xs-5 text-center">
+                    <span id="js-computerPoints" class="badge">
+                        0
+                    </span>
+                    Computer
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 text-center">
+                    <span id="js-playerPick">
+                        Player selection
+                    </span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-5 text-center">
+                    <span id="js-computerPick">
+                        Computer selection
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 text-center">
+                    <span id="js-playerResult">
+                        Player Score
+                    </span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-5 text-center">
+                    <span id="js-computerResult">
+                        Computer Score
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="confetti"></div>
+        <script src="script.js"></script> 
+    </body>
+</html>
