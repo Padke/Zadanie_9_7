@@ -23,3 +23,32 @@ h3 {
     height: 90vh;
     position: absolute;
 }
+.rules ul {
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+}
+
+.rules h4 {
+    font-size: 26px;
+}
+.button {
+    display: block;
+    padding-bottom:20px;
+}
+.winnerIs {
+    padding-top:40px;
+    font-size: 24px;
+}
+.newGameBtn {
+    padding:20px;
+    border-radius: 15px;
+    background-color:pink;
+    font-size:24px;
+}
+.win {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    padding-top:10px;
+}

@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style.css"> 
     </head>
     <body>
-        
+        <div id="js-confetti" class="confetti"></div>
         <div class="container">
             <h3 class="text-center">
                 Welcome to the game
@@ -25,20 +25,21 @@
                 AnimalWars
             </h3>
         </div>
-        
 
         <div id="js-newGameElement" class="container">
             <div class="row text-center">
-                <button id="js-newGameButton" class="btn btn-success">
+               <div> <button id="js-newGameButton" class="btn btn-success">
                     New game
                 </button>
-                <div class="rules">
-                    <h4>The rules of the game:<br>
-                        dog > cat<br>
-                        cat > hamster<br>
-                        hamster > dog<br>
-                        10 gained points wins!
-                    </h4>
+                </div>
+                <div id="js-rules" class="rules col-xs-6 col-xs-offset-3">
+                    <h4>The rules of the game:</h4>
+                    <ul>
+                        <li>dog > cat<br></li>
+                        <li>cat > hamster<br></li>
+                        <li>hamster > dog<br></li>
+                        <li>10 gained points wins!</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -106,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="confetti"></div>
+
         <script src="script.js"></script> 
     </body>
 </html>

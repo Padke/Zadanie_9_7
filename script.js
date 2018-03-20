@@ -22,7 +22,8 @@ var gameState = 'notStarted',
 var newGameElem = document.getElementById('js-newGameElement'),
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement'),
-    confetti = document.getElementById('js-confetti');
+    confetti = document.getElementById('js-confetti'),
+    rules = document.getElementById('js-rules');
 
 function setGameElements() {
     switch (gameState) {
@@ -30,17 +31,30 @@ function setGameElements() {
             newGameElem.style.display = 'none';
             pickElem.style.display = 'block';
             resultsElem.style.display = 'block';
-            confetti.style.display = 'none';
+            document.body.style.background = "none";
+            playerPointsElem.innerHTML = '0';
+            computerPointsElem.innerHTML = '0';
+            playerResultElem.innerText = '';
+            computerResultElem.innerText = '';
+            playerPickElem.innerText = '';
+            computerPickElem.innerText = '';
             break;
         case 'ended':
+            if (player.score == 10) {
+                rules.innerText = 'The winner is ' + player.name;
+                rules.className = 'winnerIs';
+            } else {
+                rules.innerText = 'The winner is ' + 'Computer';
+            }
+            rules.className = 'winnerIs';
+            newGameBtn.className = 'newGameBtn';
+            document.body.style.background = "url('img/confetti.gif') no-repeat center";
             newGameBtn.innerText = 'Play again';
-            confetti.style.display = 'block';
         case 'notStarted':
         default:
             newGameElem.style.display = 'block';
             pickElem.style.display = 'none';
             resultsElem.style.display = 'none';
-            confetti.style.display = 'block';
     }
 }
 
@@ -82,7 +96,8 @@ function playerPick(playerPick) {
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
 }
-
+playerResultElem.className = 'win';
+computerResultElem.className = 'win';
 function checkRoundWinner(playerPick, computerPick) {
     playerResultElem.innerHTML = computerResultElem.innerHTML = '';
 
@@ -104,13 +119,14 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
     }
-    
+
     setGamePoints();
-    
+
     if(computer.score == 10 || player.score == 10) {
         gameState = 'ended';
         setGameElements();
     }
+
 }
 
 function playerPick(playerPick) {
